@@ -30,38 +30,71 @@
         .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
         
-        /* Modal Layout */
+        /* --- MODAL ESTRUTURADO --- */
         #modal-container {
             display: none;
             position: fixed;
             inset: 0;
-            z-index: 100;
-            background: rgba(0,0,0,0.95);
+            z-index: 1000;
+            background: #000;
             overflow: hidden;
         }
         #modal-container.active { display: flex; }
 
-        .side-panel {
-            transform: translateX(100%);
-            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .active .side-panel { transform: translateX(0); }
-
-        /* Fundo dinâmico com blur conforme a imagem enviada */
+        /* Fundo dinâmico com blur ajustado para ver o carro atrás */
         #modal-bg-overlay {
             position: absolute;
             inset: 0;
             background-size: cover;
             background-position: center;
-            filter: blur(80px) brightness(0.25);
-            z-index: 0;
-            transform: scale(1.3);
+            filter: blur(20px) brightness(0.35);
+            z-index: 1;
+            transform: scale(1.1);
+            transition: background-image 0.5s ease;
         }
 
-        /* Ajuste para a imagem central não ser cortada mas ser GIGANTE */
-        #modal-img {
-            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        /* Container do Card Central Gigante */
+        .modal-content-wrapper {
+            position: relative;
+            z-index: 10;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            cursor: zoom-out;
         }
+
+        #modal-img {
+            max-width: 96%;
+            max-height: 92vh;
+            object-fit: contain;
+            border-radius: 16px;
+            box-shadow: 0 50px 100px rgba(0,0,0,0.9);
+            opacity: 0;
+            transform: scale(0.9);
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .active #modal-img { opacity: 1; transform: scale(1); }
+
+        /* Painel Lateral Glassmorphism */
+        .side-panel {
+            position: relative;
+            z-index: 20;
+            width: 100%;
+            max-width: 450px;
+            background: rgba(10, 10, 10, 0.5);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            border-left: 1px solid rgba(255,255,255,0.1);
+            padding: 4rem 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transform: translateX(100%);
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .active .side-panel { transform: translateX(0); }
     </style>
 </head>
 <body class="bg-background-dark text-slate-100 font-display overflow-x-hidden">
@@ -69,11 +102,11 @@
 <div id="modal-container" class="items-stretch justify-end">
     <div id="modal-bg-overlay"></div>
 
-    <div class="relative z-10 flex-1 flex items-center justify-center p-0 cursor-zoom-out" onclick="closeModal()">
-        <img id="modal-img" src="" class="w-full h-screen object-contain drop-shadow-[0_50px_100px_rgba(0,0,0,0.9)] scale-125 opacity-0">
+    <div class="modal-content-wrapper" onclick="closeModal()">
+        <img id="modal-img" src="" alt="Ferrari Highlight">
     </div>
 
-    <div class="side-panel relative z-20 w-full md:w-[450px] bg-surface-dark/95 backdrop-blur-2xl border-l border-white/10 p-8 md:p-12 flex flex-col justify-center">
+    <div class="side-panel">
         <button onclick="closeModal()" class="absolute top-8 right-8 text-white/50 hover:text-primary transition-colors">
             <span class="material-symbols-outlined text-3xl">close</span>
         </button>
@@ -85,7 +118,7 @@
                 <div class="h-1 w-20 bg-primary"></div>
             </div>
 
-            <p class="text-slate-400 text-lg font-light leading-relaxed">
+            <p class="text-slate-300 text-lg font-light leading-relaxed">
                 A expressão máxima da performance italiana. Engenharia de precisão combinada com a paixão das pistas adaptada para a excelência das ruas.
             </p>
 
@@ -173,12 +206,6 @@
                 <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all"></div>
             </div>
         </div>
-        <div class="min-w-[400px] snap-start group cursor-zoom-in reveal" onclick="openModal('images/Models/starter/SF90STRADALE.png', 'SF90 Spider', 'Hybrid Convertible', '$570,000')">
-            <div class="relative aspect-[4/5] overflow-hidden rounded-2xl bg-accent-dark">
-                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="images/Models/starter/SF90STRADALE.png">
-                <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all"></div>
-            </div>
-        </div>
     </div>
 </section>
 
@@ -196,33 +223,21 @@
     const modal = document.getElementById('modal-container');
     const modalImg = document.getElementById('modal-img');
     const modalBgOverlay = document.getElementById('modal-bg-overlay');
-    const modalTitle = document.getElementById('modal-title');
-    const modalTag = document.getElementById('modal-tag');
-    const modalPrice = document.getElementById('modal-price');
 
     function openModal(imgSrc, title, tag, price) {
         modalImg.src = imgSrc;
         modalBgOverlay.style.backgroundImage = `url('${imgSrc}')`;
-        modalTitle.innerText = title;
-        modalTag.innerText = tag;
-        modalPrice.innerText = price;
+        document.getElementById('modal-title').innerText = title;
+        document.getElementById('modal-tag').innerText = tag;
+        document.getElementById('modal-price').innerText = price;
+        
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
-
-        // Efeito suave de entrada
-        setTimeout(() => {
-            modalImg.style.opacity = "1";
-            modalImg.style.transform = "scale(1.25)";
-        }, 50);
     }
 
     function closeModal() {
-        modalImg.style.opacity = "0";
-        modalImg.style.transform = "scale(1.1)";
-        setTimeout(() => {
-            modal.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }, 500);
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
     }
 
     const reveal = () => {
