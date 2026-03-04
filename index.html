@@ -141,13 +141,15 @@
             <h2 class="text-xl font-extrabold tracking-tighter uppercase italic">Ferrari</h2>
         </div>
         <nav class="hidden md:flex items-center gap-10">
-            <a class="text-[10px] font-bold tracking-widest uppercase hover:text-primary transition-colors" href="#">Models</a>
-            <a class="text-[10px] font-bold tracking-widest uppercase hover:text-primary transition-colors" href="#">Locator</a>
-            <a class="text-[10px] font-bold tracking-widest uppercase hover:text-primary transition-colors" href="#">Financing</a>
+            <a class="text-[10px] font-bold tracking-widest uppercase hover:text-primary transition-colors" href="./models.html">Models</a>
+            <a class="text-[10px] font-bold tracking-widest uppercase hover:text-primary transition-colors" href="./locator.html">Locator</a>
+            <a class="text-[10px] font-bold tracking-widest uppercase hover:text-primary transition-colors" href="./checkout.html">Financing</a>
         </nav>
         <a href="#" class="bg-primary hover:bg-red-700 text-white text-[10px] font-black uppercase tracking-[0.2em] px-6 py-3 rounded-sm transition-all">Configure Yours</a>
     </div>
 </header>
+
+
 
 <section class="relative min-h-screen flex items-end overflow-hidden">
     <div class="absolute inset-0 z-0">
@@ -160,6 +162,32 @@
             <h1 class="text-6xl md:text-9xl font-extrabold leading-[0.85] tracking-tighter text-white uppercase italic">The Essence <br/> of <span class="text-primary">Speed</span></h1>
             <p class="text-lg text-slate-400 max-w-xl font-light">Italian engineering at its peak. Clique nas máquinas para ampliar a visão.</p>
         </div>
+    </div>
+</section>
+
+<section class="py-24 bg-black border-y border-white/5">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+        
+        <div class="reveal">
+            <p class="text-primary font-black text-5xl md:text-6xl italic tracking-tighter mb-2">800</p>
+            <p class="text-[10px] text-slate-500 uppercase tracking-[0.3em] font-bold">Cavalos de Potência</p>
+        </div>
+
+        <div class="reveal" style="transition-delay: 0.1s;">
+            <p class="text-white font-black text-5xl md:text-6xl italic tracking-tighter mb-2">2.9s</p>
+            <p class="text-[10px] text-slate-500 uppercase tracking-[0.3em] font-bold">0-100 KM/H</p>
+        </div>
+
+        <div class="reveal" style="transition-delay: 0.2s;">
+            <p class="text-white font-black text-5xl md:text-6xl italic tracking-tighter mb-2">340</p>
+            <p class="text-[10px] text-slate-500 uppercase tracking-[0.3em] font-bold">Velocidade Máxima</p>
+        </div>
+
+        <div class="reveal" style="transition-delay: 0.3s;">
+            <p class="text-primary font-black text-5xl md:text-6xl italic tracking-tighter mb-2">V12</p>
+            <p class="text-[10px] text-slate-500 uppercase tracking-[0.3em] font-bold">Engine Heart</p>
+        </div>
+
     </div>
 </section>
 
@@ -176,39 +204,228 @@
     </div>
 
     <div id="model-carousel" class="flex overflow-x-auto hide-scrollbar px-6 gap-8 snap-x scroll-smooth">
-        <div class="min-w-[400px] snap-start group cursor-zoom-in reveal" onclick="openModal('./images/Models/starter/SF90.jpeg', 'SF90 Stradale', 'Hybrid PHEV', '$511,000')">
+        <div class="min-w-[400px] snap-start group cursor-zoom-in reveal" onclick="openModal('./images/Models/starter/SF90.jpeg', 'SF90 Stradale', 'Hybrid PHEV', 'R$ 6.900.000')">
             <div class="relative aspect-[4/5] overflow-hidden rounded-2xl bg-accent-dark">
                 <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="./images/Models/starter/SF90.jpeg">
                 <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all"></div>
             </div>
         </div>
-        <div class="min-w-[400px] snap-start group cursor-zoom-in reveal" onclick="openModal('images/Models/starter/Ferrari-Roma.png', 'Roma', 'V8 Grand Tourer', '$247,000')">
+
+        <div class="min-w-[400px] snap-start group cursor-zoom-in reveal" onclick="openModal('images/Models/starter/Ferrari-Roma.png', 'Roma', 'V8 Grand Tourer', 'R$ 6.600.000')">
             <div class="relative aspect-[4/5] overflow-hidden rounded-2xl bg-accent-dark">
                 <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="images/Models/starter/Ferrari-Roma.png">
                 <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all"></div>
             </div>
         </div>
-        <div class="min-w-[400px] snap-start group cursor-zoom-in reveal" onclick="openModal('images/Models/starter/488GTB.png', '488 GTB', 'V8 Turbo', '$285,000')">
+
+        <div class="min-w-[400px] snap-start group cursor-zoom-in reveal" onclick="openModal('images/Models/starter/488GTB.png', '488 GTB', 'V8 Turbo', '$5.800.000')">
             <div class="relative aspect-[4/5] overflow-hidden rounded-2xl bg-accent-dark">
                 <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="images/Models/starter/488GTB.png">
                 <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all"></div>
             </div>
         </div>
-        <div class="min-w-[400px] snap-start group cursor-zoom-in reveal" onclick="openModal('images/Models/starter/812.png', '812 Superfast', 'V12 Monster', '$335,000')">
+
+        <div class="min-w-[400px] snap-start group cursor-zoom-in reveal" onclick="openModal('images/Models/starter/812.png', '812 Superfast', 'V12 Monster', 'R$ 3.900.000')">
             <div class="relative aspect-[4/5] overflow-hidden rounded-2xl bg-accent-dark">
                 <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="images/Models/starter/812.png">
                 <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all"></div>
             </div>
         </div>
-        <div class="min-w-[400px] snap-start group cursor-zoom-in reveal" onclick="openModal('images/Models/starter/purosangue.png', 'Purosangue', 'V12 SUV', '$398,000')">
+
+        <div class="min-w-[400px] snap-start group cursor-zoom-in reveal" onclick="openModal('images/Models/starter/purosangue.png', 'Purosangue', 'V12 SUV', '$3.798.000')">
             <div class="relative aspect-[4/5] overflow-hidden rounded-2xl bg-accent-dark">
                 <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="images/Models/starter/purosangue.png">
                 <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all"></div>
             </div>
         </div>
+
+        <div class="min-w-[400px] snap-start group cursor-zoom-in reveal" onclick="openModal('images/Models/starter/SF90STRADALE.png', 'SF90STRADALE', 'V12 Icona Series', '$5.250.000')">
+            <div class="relative aspect-[4/5] overflow-hidden rounded-2xl bg-accent-dark">
+                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="images/Models/starter/SF90STRADALE.png">
+                <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-32 bg-surface-dark relative overflow-hidden border-y border-white/5">
+    <div class="absolute top-0 left-0 text-[20rem] font-black text-white/[0.02] select-none leading-none -translate-x-20 -translate-y-20 italic uppercase">
+        1947
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center relative z-10">
+        <div class="relative reveal group">
+            <div class="absolute -inset-4 border border-primary/20 rounded-2xl scale-95 group-hover:scale-100 transition-transform duration-700"></div>
+            <div class="relative aspect-[3/4] overflow-hidden rounded-xl">
+                <img src="./images/Models/hub/enzo.png" 
+                     alt="Enzo Ferrari Heritage" 
+                     class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000">
+                <div class="absolute inset-0 bg-gradient-to-t from-surface-dark via-transparent to-transparent"></div>
+            </div>
+            <div class="absolute bottom-8 right-8 bg-primary p-6 rounded-sm shadow-2xl">
+                <p class="text-4xl font-black italic italic tracking-tighter">75+</p>
+                <p class="text-[10px] uppercase font-bold tracking-widest leading-none">Anos de Glória</p>
+            </div>
+        </div>
+
+        <div class="space-y-8 reveal">
+            <div>
+                <h3 class="text-primary text-xs font-bold tracking-[0.4em] uppercase mb-4 flex items-center gap-4">
+                    <span class="h-[1px] w-8 bg-primary"></span> Maranello Heritage
+                </h3>
+                <h2 class="text-5xl md:text-7xl font-extrabold tracking-tighter text-white italic uppercase leading-[0.9]">
+                    O Homem por trás da <span class="text-primary">Lenda</span>
+                </h2>
+            </div>
+            
+            <div class="space-y-6 text-slate-400 font-light text-lg leading-relaxed">
+                <p>
+                    "Eu não vendo carros, eu vendo motores. Os carros eu dou de graça porque algo precisa segurar o motor." — <span class="text-white font-medium">Enzo Ferrari</span>.
+                </p>
+                <p>
+                    Desde a lendária 125 S de 1947, cada curva de uma Ferrari é desenhada pelo vento e cada batida do motor é sincronizada com o coração de quem a pilota. A nossa história não é feita de metal, mas de vitórias na Fórmula 1 e a busca incessante pela perfeição nas ruas.
+                </p>
+            </div>
+
+            <div class="pt-6">
+                <button class="group flex items-center gap-6 text-white hover:text-primary transition-colors">
+                    <span class="text-[10px] font-black uppercase tracking-[0.3em]">Explorar Linha do Tempo</span>
+                    <div class="relative flex items-center justify-center">
+                        <div class="h-[1px] w-12 bg-white group-hover:bg-primary group-hover:w-20 transition-all"></div>
+                        <span class="material-symbols-outlined text-sm absolute -right-2 opacity-0 group-hover:opacity-100 transition-all">chevron_right</span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-32 bg-background-dark border-b border-white/5 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-16">
+            
+            <div class="max-w-xl reveal">
+                <h3 class="text-primary text-xs font-bold tracking-[0.4em] uppercase mb-4">Acoustic Engineering</h3>
+                <h2 class="text-5xl md:text-7xl font-extrabold tracking-tighter text-white italic uppercase leading-none mb-8">
+                    A Sinfonia <br/> de <span class="text-primary">Maranello</span>
+                </h2>
+                <p class="text-slate-400 font-light text-lg mb-10 leading-relaxed">
+                    Cada motor Ferrari é afinado como um instrumento musical. O som não é apenas um subproduto, é uma assinatura emocional que reverbera a 9.000 RPM.
+                </p>
+                
+                <div class="flex items-center gap-6 group cursor-pointer" onclick="toggleEngineSound()">
+                    <div id="play-button" class="size-20 rounded-full border border-primary flex items-center justify-center bg-primary/10 group-hover:bg-primary transition-all duration-500">
+                        <span id="sound-icon" class="material-symbols-outlined text-4xl text-primary group-hover:text-white transition-colors">play_arrow</span>
+                    </div>
+                    <div>
+                        <p class="text-white font-black uppercase tracking-widest text-sm">Ouvir V12 Aspirado</p>
+                        <p class="text-primary text-[10px] uppercase font-bold tracking-[0.2em]">812 Superfast Engine</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex items-end gap-1 h-32 reveal">
+                <div class="w-2 bg-primary/20 h-1/4 rounded-full sound-bar"></div>
+                <div class="w-2 bg-primary/40 h-1/2 rounded-full sound-bar"></div>
+                <div class="w-2 bg-primary/60 h-3/4 rounded-full sound-bar"></div>
+                <div class="w-2 bg-primary h-full rounded-full sound-bar"></div>
+                <div class="w-2 bg-primary/60 h-3/4 rounded-full sound-bar"></div>
+                <div class="w-2 bg-primary/40 h-1/2 rounded-full sound-bar"></div>
+                <div class="w-2 bg-primary/20 h-1/4 rounded-full sound-bar"></div>
+                <div class="hidden md:block w-2 bg-primary/40 h-1/2 rounded-full sound-bar"></div>
+                <div class="hidden md:block w-2 bg-primary/80 h-full rounded-full sound-bar"></div>
+            </div>
+        </div>
     </div>
 </section>
 
+<audio id="engine-audio" loop>
+    <source src="./assets/O V12 mais afinado que você vai ouvir. Aventador com Secret Weapon. - Gui AvantGarde (youtube).mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+</audio>
+
+<style>
+    /* Animação para as barras de som quando ativado */
+    .sound-bar.playing {
+        animation: soundWave 0.6s ease-in-out infinite alternate;
+    }
+    @keyframes soundWave {
+        from { height: 10%; }
+        to { height: 100%; }
+    }
+    /* Delay diferente para cada barra para parecer orgânico */
+    .sound-bar:nth-child(2) { animation-delay: 0.1s; }
+    .sound-bar:nth-child(3) { animation-delay: 0.3s; }
+    .sound-bar:nth-child(4) { animation-delay: 0.2s; }
+    .sound-bar:nth-child(5) { animation-delay: 0.4s; }
+</style>
+
+<div id="custom-cursor" class="fixed size-4 bg-primary rounded-full pointer-events-none z-[9999] mix-blend-difference transition-transform duration-100 ease-out scale-0 md:block hidden"></div>
+<footer class="bg-[#050505] pt-24 pb-12 border-t border-white/5 relative overflow-hidden">
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[200px] bg-primary/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-16 mb-20">
+            
+            <div class="md:col-span-5 space-y-8">
+                <div class="flex items-center gap-3">
+                    <div class="text-primary size-10 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-4xl italic font-black">stat_3</span>
+                    </div>
+                    <h2 class="text-3xl font-black tracking-tighter uppercase italic text-white">Ferrari</h2>
+                </div>
+                <p class="text-slate-500 font-light leading-relaxed max-w-sm text-lg italic">
+                    "Driven by emotion. Defined by performance." <br/>
+                    A excelência de Maranello, agora ao seu alcance em cada pixel.
+                </p>
+                <div class="flex gap-6">
+                    <a href="#" class="size-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-all duration-500 group">
+                        <span class="material-symbols-outlined text-xl">share</span>
+                    </a>
+                    <a href="#" class="size-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-all duration-500 group">
+                        <span class="material-symbols-outlined text-xl">play_circle</span>
+                    </a>
+                    <a href="#" class="size-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-all duration-500 group">
+                        <span class="material-symbols-outlined text-xl">photo_camera</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="md:col-span-3 space-y-6">
+                <h4 class="text-white text-[10px] font-black uppercase tracking-[0.4em]">Experience</h4>
+                <ul class="space-y-4">
+                    <li><a href="#" class="text-slate-400 hover:text-primary transition-colors text-sm font-light uppercase tracking-widest">Racing Heritage</a></li>
+                    <li><a href="#" class="text-slate-400 hover:text-primary transition-colors text-sm font-light uppercase tracking-widest">Collections</a></li>
+                    <li><a href="#" class="text-slate-400 hover:text-primary transition-colors text-sm font-light uppercase tracking-widest">Tailor Made</a></li>
+                    <li><a href="#" class="text-slate-400 hover:text-primary transition-colors text-sm font-light uppercase tracking-widest">Maranello Store</a></li>
+                </ul>
+            </div>
+
+            <div class="md:col-span-4 space-y-6">
+                <h4 class="text-white text-[10px] font-black uppercase tracking-[0.4em]">The Scuderia Club</h4>
+                <p class="text-slate-500 text-sm font-light">Receba atualizações exclusivas sobre lançamentos e eventos de pista.</p>
+                <div class="relative group">
+                    <input type="email" placeholder="ENTER YOUR EMAIL" 
+                           class="w-full bg-white/5 border-b border-white/10 py-4 px-0 text-white text-xs tracking-widest outline-none focus:border-primary transition-all placeholder:text-slate-700">
+                    <button class="absolute right-0 top-1/2 -translate-y-1/2 text-primary hover:translate-x-2 transition-transform">
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex flex-wrap justify-center gap-8 text-[9px] font-bold text-white/30 uppercase tracking-[0.3em]">
+                <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition-colors">Cookie Policy</a>
+                <a href="#" class="hover:text-white transition-colors">Legal Notes</a>
+                <a href="#" class="hover:text-white transition-colors">Corporate</a>
+            </div>
+            
+            <p class="text-[9px] text-white/20 uppercase tracking-[0.4em] font-bold">
+                © 2026 Ferrari S.p.A - All Rights Reserved
+            </p>
+        </div>
+    </div>
+</footer>
 <script>
     const header = document.getElementById('main-header');
     window.addEventListener('scroll', () => {
@@ -247,6 +464,42 @@
     };
     window.addEventListener('scroll', reveal);
     reveal();
+
+
+
+    let isPlaying = false;
+const audio = document.getElementById('engine-audio');
+const soundIcon = document.getElementById('sound-icon');
+const soundBars = document.querySelectorAll('.sound-bar');
+
+function toggleEngineSound() {
+    if (isPlaying) {
+        audio.pause();
+        soundIcon.innerText = 'play_arrow';
+        soundBars.forEach(bar => bar.classList.remove('playing'));
+    } else {
+        audio.play();
+        soundIcon.innerText = 'pause';
+        soundBars.forEach(bar => bar.classList.add('playing'));
+    }
+    isPlaying = !isPlaying;
+}
+
+
+
+const cursor = document.getElementById('custom-cursor');
+
+window.addEventListener('mousemove', (e) => {
+    // Faz o cursor aparecer e seguir o mouse
+    cursor.style.transform = `translate(${e.clientX - 8}px, ${e.clientY - 8}px) scale(1)`;
+});
+
+// Efeito de aumentar o cursor em links e botões
+document.querySelectorAll('a, button, .cursor-zoom-in').forEach(el => {
+    el.addEventListener('mouseenter', () => cursor.classList.add('scale-[3]', 'opacity-50'));
+    el.addEventListener('mouseleave', () => cursor.classList.remove('scale-[3]', 'opacity-50'));
+});
 </script>
 </body>
+
 </html>
