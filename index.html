@@ -7,6 +7,8 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link rel="icon" type="image/png" href="images/icons/ferrari_transparente_logo.png">
+    
     <script>
         tailwind.config = {
             darkMode: "class",
@@ -136,15 +138,19 @@
 
 <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b border-white/5 bg-transparent">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <div class="flex items-center gap-3">
-            <div class="text-primary size-8"><span class="material-symbols-outlined text-3xl">stat_3</span></div>
+        <div class="flex items-center gap-0.1">
+            <div class="flex items-center justify-center">
+                <img src="./images/icons/ferrari_logo.png" alt="Ferrari Logo" class="h-8 w-auto object-contain">
+            </div>
             <h2 class="text-xl font-extrabold tracking-tighter uppercase italic">Ferrari</h2>
         </div>
+        
         <nav class="hidden md:flex items-center gap-10">
             <a class="text-[10px] font-bold tracking-widest uppercase hover:text-primary transition-colors" href="./models.html">Models</a>
             <a class="text-[10px] font-bold tracking-widest uppercase hover:text-primary transition-colors" href="./locator.html">Locator</a>
             <a class="text-[10px] font-bold tracking-widest uppercase hover:text-primary transition-colors" href="./checkout.html">Financing</a>
         </nav>
+        
         <a href="#" class="bg-primary hover:bg-red-700 text-white text-[10px] font-black uppercase tracking-[0.2em] px-6 py-3 rounded-sm transition-all">Configure Yours</a>
     </div>
 </header>
